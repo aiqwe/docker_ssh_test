@@ -9,7 +9,7 @@ docker-compose up -d
 ```
 
 #### 실행
-root 패스워드 확인 : Dockerfile에서 RUN echo 'root:{password}' | chpasswd 부분확인, 현재는 1111로 세팅해놓음
+root 패스워드 확인 : Dockerfile에서 RUN echo 'root:{password}' | chpasswd 부분확인, 현재는 1111로 세팅해놓음  
 같은 클러스터에서 컨테이너를 띄웠다는 가정하에, docker network driver bridge로 연결해놔서 컨테이너명으로 ssh 접근 가능(root@컨테이너명)
 ```bash
 docker ps -a
