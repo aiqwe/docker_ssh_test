@@ -1,0 +1,10 @@
+services:
+  con1:
+    build: .
+  con2:
+    build: .
+
+networks:
+  test-network:
+    driver: bridge
+  
