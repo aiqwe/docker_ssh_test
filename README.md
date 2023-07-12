@@ -18,11 +18,18 @@ CONTAINER ID   IMAGE                    COMMAND                  CREATED        
 6071101657ef   docker_ssh-con2          "/usr/sbin/sshd -D"      10 minutes ago   Up 10 minutes   22/tcp               docker_ssh-con2-1
 7d14edbb4070   docker_ssh-con1          "/usr/sbin/sshd -D"      10 minutes ago   Up 10 minutes   22/tcp               docker_ssh-con1-1
 ```
+
+  
 docker_ssh_con1-1 에서 docker_ssh_con2-1로 ssh 접속해보기
 ```bash
 docker exec -it docker_ssh-con2-1 ssh root@docker_ssh-con1-1
 ```
-실행시키면 root 패스워드 물어보는데 세팅해놓은 1111 입력시 ssh로 접근 가능
+  
+실행시키면 root 패스워드 물어보는데 세팅해놓은 1111 입력시 ssh로 접근 가능  
+이미지를 내리려면 아래 명령어 입력
+```bash
+docker-compose down
+```
 
 ### References
 Install Docker Compose : https://docs.docker.com/compose/install/standalone/#on-linux  
